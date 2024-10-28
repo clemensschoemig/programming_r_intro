@@ -1,1 +1,2 @@
 library(geodata)
+library(knitr)
