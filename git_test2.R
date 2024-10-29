@@ -12,12 +12,11 @@ library(cowsay)
 say("Hello World!")
 
 
-
-# someone_say_hello<- function(){
-#   animal <- sample(names(animal)),1)
-#   say(paste("Hello, i an am ", animal, ))
-# }
-# someone_say_hello()
+someone_say_hello<- function(){
+  animal <- sample(names(animals), 1)
+  say(paste("Hello, i'm a", animal, ".", collapse = ""), by=animal)
+ }
+ someone_say_hello()
 
 
 
@@ -138,6 +137,7 @@ matr1 <- matrix(numbers1, nrow=20, ncol=4)
 matr1
 
 test <- data.frame(A=c(1,2,3),B=c("aB1","ab2","ab3"))
+
 
 
 
