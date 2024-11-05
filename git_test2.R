@@ -46,7 +46,7 @@ setwd("/Users/cleme/Eagle/programming/")
 list.files()
 
 people_test <- read.table("table_test.xlsx", header=TRUE, stringsAsFactors=FALSE)
-#hat bei mir nicht funktioniert wil real table nicht xlsx impoertieren kann (xlsx package impoert nwed)
+#hat bei mir nicht funktioniert weil real table nicht xlsx impoertieren kann (xlsx package impoert nwed)
 
 people_test <- read.csv("table_test1.csv", header=TRUE, stringsAsFactors=FALSE)
 head(people_test)
@@ -97,11 +97,14 @@ names(df)
 X <- seq(1,100, by=2.5)
 X
 X[5]
+X[4:10]
 X[length(X)]
 
 Y <- seq(50,60)
 Y
 length(Y)
+Y[length(Y)-1]
+Y[-5]
 
 
 X2 <- X
@@ -136,7 +139,28 @@ numbers1
 matr1 <- matrix(numbers1, nrow=20, ncol=4)
 matr1
 
-test <- data.frame(A=c(1,2,3),B=c("aB1","ab2","ab3"))
+
+df2 <- data.frame(matr1)
+head(df2)
+summary(df2)
+
+df1 <- data.frame(A=c(1,2,3),B=c("aB1","ab2","ab3"))
+df1[,1]
+df1[,"A"]
+
+
+df3 <- data.frame(plot="location1", measure1=runif(100)*1000, measure2=round(runif(100)*100), value=rnorm(100,2,1),ID=rep(LETTERS,100)[1:100])
+
+df4 <- data.frame(plot="location2", measure1=runif(50)*100, measure2=round(runif(50)*10), value=rnorm(50),ID=rep(LETTERS,50)[1:50])
+
+df5 <- rbind(df3, df4)
+
+summary(df5)
+str(df5)
+mode(df5)
+head(df5)
+df5[,c("plot","measure1","measure2")]
+df5[66:70,c("plot","measure1","measure2")]
 
 
 
