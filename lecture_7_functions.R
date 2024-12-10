@@ -9,7 +9,6 @@ seq(from=-10, to=10, by=0.05) %>%
 '
 
 
-
 getwd()
 setwd("/Users/cleme/Eagle/programming/")
 
