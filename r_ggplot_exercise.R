@@ -25,3 +25,4 @@ pdf("landcover_vs_L8savi_ndvi.pdf", width = 12, height = 4)
 plot <- ggplot(df, aes(x=L8.ndvi, y=L8.savi))+ geom_point(size=2)+geom_point(aes(color=LCname),size=2)+facet_grid(.~LCname)
 print(plot)
 dev.off()
+
